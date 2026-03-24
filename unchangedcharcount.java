@@ -1,0 +1,17 @@
+import java.util.*;
+class Main {
+    public static int unchangedcharcount(String str){
+        int count = 0;
+        for(int i = 0 ; i < str.length() ; i++){
+            if(str.charAt(i)==str.charAt(str.length()-i-1)){
+                count++;
+            }
+        }
+        return count;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        System.out.println(unchangedcharcount(str));
+    }
+}
